@@ -28,7 +28,7 @@ resource "aws_instance" "web" {
 }
 
 data "template_file" "user_data" {
-  template = "${file("./cloud-config.yaml")}"
+  template = "${file("${path.module}/cloud-config.yaml")}"
 }
 
 
